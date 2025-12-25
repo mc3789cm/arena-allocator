@@ -3,8 +3,7 @@
 void arena_init(struct arena_t *a)
 {
     // Start with no blocks; the arena grows lazily on the first allocation.
-    a->head = NULL;
-    a->tail = NULL;
+    a->head = a->tail = NULL;
 }
 
 void *_arena_alloc(struct arena_t *a, const size_t size, const size_t align)
