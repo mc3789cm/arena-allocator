@@ -67,5 +67,5 @@ void arena_deinit(struct arena_t *a)
     }
 
     // Leave the arena in a clean, reusable state.
-    a->head = a->tail = NULL;
+    arena_init(a);
 }
